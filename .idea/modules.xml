@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ibuy-basic/basic-generator/basic-generator.iml" filepath="$PROJECT_DIR$/ibuy-basic/basic-generator/basic-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-basic/basic-util/basic-util.iml" filepath="$PROJECT_DIR$/ibuy-basic/basic-util/basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-common-parent/common-interface/common-interface.iml" filepath="$PROJECT_DIR$/ibuy-common-parent/common-interface/common-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-common-parent/common-service/common-service.iml" filepath="$PROJECT_DIR$/ibuy-common-parent/common-service/common-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-basic/ibuy-basic.iml" filepath="$PROJECT_DIR$/ibuy-basic/ibuy-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-common-parent/ibuy-common-parent.iml" filepath="$PROJECT_DIR$/ibuy-common-parent/ibuy-common-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-config-server/ibuy-config-server.iml" filepath="$PROJECT_DIR$/ibuy-config-server/ibuy-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-eureka/ibuy-eureka.iml" filepath="$PROJECT_DIR$/ibuy-eureka/ibuy-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-parent.iml" filepath="$PROJECT_DIR$/ibuy-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-plat-parent/ibuy-plat-parent.iml" filepath="$PROJECT_DIR$/ibuy-plat-parent/ibuy-plat-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-product-parent/ibuy-product-parent.iml" filepath="$PROJECT_DIR$/ibuy-product-parent/ibuy-product-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-zuul/ibuy-zuul.iml" filepath="$PROJECT_DIR$/ibuy-zuul/ibuy-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-product-parent/product-service/src/main/main.iml" filepath="$PROJECT_DIR$/aiqi-product-parent/product-service/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-zuul/src/main/main1.iml" filepath="$PROJECT_DIR$/aiqi-zuul/src/main/main1.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-eureka/src/main/main2.iml" filepath="$PROJECT_DIR$/aiqi-eureka/src/main/main2.iml" />
@@ -11,6 +23,10 @@
       <module fileurl="file://$PROJECT_DIR$/aiqi-basic/basic-generator/src/main/main6.iml" filepath="$PROJECT_DIR$/aiqi-basic/basic-generator/src/main/main6.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-basic/basic-util/src/main/main7.iml" filepath="$PROJECT_DIR$/aiqi-basic/basic-util/src/main/main7.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-plat-parent/plat-service/src/main/main8.iml" filepath="$PROJECT_DIR$/aiqi-plat-parent/plat-service/src/main/main8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-plat-parent/plat-interface/plat-interface.iml" filepath="$PROJECT_DIR$/ibuy-plat-parent/plat-interface/plat-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-plat-parent/plat-service/plat-service.iml" filepath="$PROJECT_DIR$/ibuy-plat-parent/plat-service/plat-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-product-parent/product-interface/product-interface.iml" filepath="$PROJECT_DIR$/ibuy-product-parent/product-interface/product-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibuy-product-parent/product-service/product-service.iml" filepath="$PROJECT_DIR$/ibuy-product-parent/product-service/product-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/aiqi-product-parent/product-service/src/test/test.iml" filepath="$PROJECT_DIR$/aiqi-product-parent/product-service/src/test/test.iml" />
     </modules>
   </component>

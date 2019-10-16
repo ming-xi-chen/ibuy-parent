@@ -8,7 +8,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
-
 @Component
 public interface BrandMapper extends BaseMapper<Brand> {
 

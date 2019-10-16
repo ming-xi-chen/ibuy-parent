@@ -6,8 +6,6 @@ import cn.itsource.ibuy.query.BrandQuery;
 import cn.itsource.ibuy.util.AjaxResult;
 import cn.itsource.ibuy.util.PageList;
 import cn.itsource.ibuy.util.StrUtils;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

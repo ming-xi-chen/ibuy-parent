@@ -2,9 +2,9 @@ package ${package.Controller};
 
 import ${package.Service}.${table.serviceName};
 import ${package.Entity}.${entity};
-import cn.itsource.aiqi.query.${entity}Query;
-import cn.itsource.aiqi.util.AjaxResult;
-import cn.itsource.aiqi.util.PageList;
+import cn.itsource.ibuy.query.${entity}Query;
+import cn.itsource.ibuy.util.AjaxResult;
+import cn.itsource.ibuy.util.PageList;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;

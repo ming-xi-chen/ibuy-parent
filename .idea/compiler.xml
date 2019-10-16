@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ibuy-eureka" />
+        <module name="plat-interface" />
+        <module name="product-service" />
+        <module name="ibuy-zuul" />
+        <module name="basic-generator" />
+        <module name="plat-service" />
+        <module name="ibuy-config-server" />
+        <module name="common-interface" />
+        <module name="product-interface" />
+        <module name="basic-util" />
+        <module name="common-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="basic-generator" target="1.8" />
+      <module name="basic-util" target="1.8" />
+      <module name="common-interface" target="1.8" />
+      <module name="common-service" target="1.8" />
+      <module name="ibuy-basic" target="1.8" />
+      <module name="ibuy-common-parent" target="1.8" />
+      <module name="ibuy-config-server" target="1.8" />
+      <module name="ibuy-eureka" target="1.8" />
+      <module name="ibuy-parent" target="1.8" />
+      <module name="ibuy-plat-parent" target="1.8" />
+      <module name="ibuy-product-parent" target="1.8" />
+      <module name="ibuy-zuul" target="1.8" />
+      <module name="plat-interface" target="1.8" />
+      <module name="plat-service" target="1.8" />
+      <module name="product-interface" target="1.8" />
+      <module name="product-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
