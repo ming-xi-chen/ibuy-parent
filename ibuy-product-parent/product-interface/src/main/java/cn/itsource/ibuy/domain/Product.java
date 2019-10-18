@@ -1,14 +1,23 @@
 package cn.itsource.ibuy.domain;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
-
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+
+/**
+ * <p>
+ * 商品
+ * </p>
+ *
+ * @author mingxi
+ * @since 2019-10-17
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
@@ -116,6 +125,19 @@ public class Product implements Serializable {
 
     @TableField("badCommentCount")
     private Integer badCommentCount;
+
+    @TableField("skuProperties")
+    private String skuProperties;
+    @TableField(exist = false)
+    private ProductExt Ext;
+
+    @TableField(exist = false)
+    private ProductType productType;
+
+    @TableField(exist = false)
+    private Brand brand;
+
+    private String medias;
 
 
 }

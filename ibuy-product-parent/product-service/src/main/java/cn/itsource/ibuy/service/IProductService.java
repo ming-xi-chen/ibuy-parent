@@ -1,6 +1,8 @@
 package cn.itsource.ibuy.service;
 
 import cn.itsource.ibuy.domain.Product;
+import cn.itsource.ibuy.query.ProductQuery;
+import cn.itsource.ibuy.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IProductService extends IService<Product> {
 
+    PageList<Product> queryPage(ProductQuery query);
 }
