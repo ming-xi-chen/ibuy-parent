@@ -1,21 +1,17 @@
 package cn.itsource.ibuy.controller;
 
-import cn.itsource.ibuy.domain.Specification;
-import cn.itsource.ibuy.service.IProductService;
 import cn.itsource.ibuy.domain.Product;
+import cn.itsource.ibuy.domain.Specification;
 import cn.itsource.ibuy.query.ProductQuery;
+import cn.itsource.ibuy.service.IProductService;
 import cn.itsource.ibuy.util.AjaxResult;
 import cn.itsource.ibuy.util.PageList;
+import cn.itsource.ibuy.util.StrUtils;
 import cn.itsource.ibuy.vo.SkusVo;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/product")
@@ -23,8 +19,38 @@ public class ProductController {
     @Autowired
     public IProductService productService;
 
-    //private Logger logger = LoggerFactory.getLogger(ProductController.class);
-
+    /**
+     * 批量上架
+     * @param ids
+     * @return
+     */
+    @GetMapping("/onSale")
+    public AjaxResult onSale(@RequestParam("ids") String ids){
+        try {
+            List<Long> idList = StrUtils.splitStr2LongArr(ids);
+            productService.onSale(idList);
+            return AjaxResult.me().setMessage("上架成功!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("上架失败!"+e.getMessage());
+        }
+    }
+    /**
+     * 批量下架
+     * @param ids
+     * @return
+     */
+    @GetMapping("/offSale")
+    public AjaxResult offSale(@RequestParam("ids") String ids){
+        try {
+            List<Long> idList = StrUtils.splitStr2LongArr(ids);
+            productService.offSale(idList);
+            return AjaxResult.me().setMessage("下架成功!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("下架失败!"+e.getMessage());
+        }
+    }
     /**
     * 保存和修改公用的
     * @param product  传递的实体
@@ -116,7 +142,7 @@ public class ProductController {
     }
 
     /**
-     * 根据商品ID查询商品的显示属性
+     * 根据商品ID查询商品的SKU属性
      * @param productId
      * @return
      */
@@ -134,9 +160,6 @@ public class ProductController {
     @PostMapping("/updateSkuProperties")
     public AjaxResult updateSkuProperties(@RequestParam("productId")Long productId,
                                           @RequestBody SkusVo skusVo){
-        /*System.out.println(productId);
-        System.out.println(skusVo.getSkuProperties());
-        System.out.println(skusVo.getSkus());*/
         productService.saveSkuProperties(productId,skusVo.getSkuProperties(),skusVo.getSkus());
 
         return AjaxResult.me();
