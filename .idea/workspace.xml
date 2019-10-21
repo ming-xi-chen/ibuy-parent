@@ -1,47 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdbe3f55-5011-4b14-8e23-6b559450a422" name="Default" comment="aaa">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/ProductComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/ProductExt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Sku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Specification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/ProductCommentQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/ProductExtQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/SkuQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/SpecificationQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductCommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductExtController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/SkuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/SpecificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductCommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductExtMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SkuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SpecificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductCommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductExtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/ISkuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/ISpecificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductExtServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/SkuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/SpecificationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductCommentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductExtMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/SkuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/SpecificationMapper.xml" afterDir="false" />
+    <list default="true" id="bdbe3f55-5011-4b14-8e23-6b559450a422" name="Default" comment="aaaaa">
+      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/vo/SkusVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/java/cn/itsource/ibuy/util/GenerateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/java/cn/itsource/ibuy/util/GenerateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/resources/generate-product.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/resources/generate-product.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ibuy-basic/basic-util/src/main/java/cn/itsource/ibuy/util/ProductStateConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-basic/basic-util/src/main/java/cn/itsource/ibuy/util/ProductStateConsts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ibuy-common-parent/common-service/src/main/java/cn/itsource/ibuy/config/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-common-parent/common-service/src/main/java/cn/itsource/ibuy/config/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/ProductQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/query/ProductQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SkuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SpecificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SpecificationMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,12 +85,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\ibuy-parent\ibuy-product-parent\product-service\src\main\resources\cn\itsource\ibuy\mapper" />
+      <recent name="D:\IdeaProjects\ibuy-parent\ibuy-product-parent\product-service\src\main\java\cn\itsource\ibuy\service\impl" />
+      <recent name="D:\IdeaProjects\ibuy-parent\ibuy-product-parent\product-service\src\main\java\cn\itsource\ibuy\service" />
+      <recent name="D:\IdeaProjects\ibuy-parent\ibuy-product-parent\product-service\src\main\java\cn\itsource\ibuy\mapper" />
+      <recent name="D:\IdeaProjects\ibuy-parent\ibuy-product-parent\product-service\src\main\java\cn\itsource\ibuy\controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -328,6 +311,12 @@
       <workItem from="1571324367372" duration="817000" />
       <workItem from="1571325860867" duration="308000" />
       <workItem from="1571329529973" duration="397000" />
+      <workItem from="1571359910404" duration="2457000" />
+      <workItem from="1571537414326" duration="2507000" />
+      <workItem from="1571567475962" duration="742000" />
+      <workItem from="1571570841312" duration="2808000" />
+      <workItem from="1571575631002" duration="604000" />
+      <workItem from="1571618985357" duration="1104000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1571218254813</created>
@@ -336,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571218254813</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aaaaa">
+      <created>1571359953780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571359953780</updated>
+    </task>
+    <task id="LOCAL-00003" summary="aaaaa">
+      <created>1571360028041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571360028041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +361,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="aaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaa" />
+    <MESSAGE value="aaaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,33 +2,154 @@ package cn.itsource.ibuy.service.impl;
 
 import cn.itsource.ibuy.domain.Product;
 import cn.itsource.ibuy.domain.ProductExt;
+import cn.itsource.ibuy.domain.Sku;
+import cn.itsource.ibuy.domain.Specification;
 import cn.itsource.ibuy.mapper.ProductExtMapper;
 import cn.itsource.ibuy.mapper.ProductMapper;
+import cn.itsource.ibuy.mapper.SkuMapper;
+import cn.itsource.ibuy.mapper.SpecificationMapper;
 import cn.itsource.ibuy.query.ProductQuery;
 import cn.itsource.ibuy.service.IProductService;
 import cn.itsource.ibuy.util.PageList;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
  * 商品 服务实现类
  * </p>
  *
+ * @author solargen
+ * @since 2019-10-17
  */
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IProductService {
 
     @Autowired
     private ProductExtMapper productExtMapper;
+    @Autowired
+    private SpecificationMapper specificationMapper;
+
+    @Autowired
+    private SkuMapper skuMapper;
+
+    /**
+     * 根据商品ID查询商品的显示属性
+     * @param productId
+     * @return
+     */
+    @Override
+    public List<Specification> getViewProperties(Long productId) {
+
+        List<Specification> specifications = null;
+
+        //查询商品表中的viewProperties
+        Product product = baseMapper.selectById(productId);
+        String viewProperties = product.getViewProperties();
+        //判断是否为null
+        if(StringUtils.isEmpty(viewProperties)){
+            //根据商品类型查询属性表
+            Long productTypeId = product.getProductTypeId();
+            specifications = specificationMapper.selectList(new QueryWrapper<Specification>()
+                    .eq("product_type_id", productTypeId).eq("isSku", 0));
+        }else{
+            //转成List<Specification>
+            specifications = JSONArray.parseArray(viewProperties, Specification.class);
+        }
+        return specifications;
+    }
+    /**
+     * 保存显示属性
+     * @param productId 商品编号
+     * @param specifications 显示属性
+     * @return
+     */
+    @Override
+    public void saveViewProperties(Long productId, List<Specification> specifications) {
+        String viewProperties = JSON.toJSONString(specifications);
+        baseMapper.updateViewProperties(productId,viewProperties);
+    }
+    /**
+     * 根据商品ID查询商品的Sku属性
+     * @param productId
+     * @return
+     */
+    @Override
+    public List<Specification> getSkuProperties(Long productId) {
+        List<Specification> specifications = null;
+        //查询商品表中的skuProperties
+        Product product = baseMapper.selectById(productId);
+        String skuProperties = product.getSkuProperties();
+        //判断是否为null
+        if(StringUtils.isEmpty(skuProperties)){
+            //根据商品类型查询属性表
+            Long productTypeId = product.getProductTypeId();
+            specifications = specificationMapper.selectList(new QueryWrapper<Specification>()
+                    .eq("product_type_id", productTypeId).eq("isSku", 1));
+        }else{
+            //转成List<Specification>
+            specifications = JSONArray.parseArray(skuProperties, Specification.class);
+        }
+        return specifications;
+    }
+    /**
+     * 保存sku属性
+     * @param productId
+     * @param skuProperties
+     * @param skus
+     */
+    @Override
+    @Transactional
+    public void saveSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus) {
+        //修改t_product表中skuProperties
+        String skuPropertiesJSON = JSON.toJSONString(skuProperties);
+        baseMapper.updateSkuProperties(productId,skuPropertiesJSON);
+        //维护t_sku表
+
+        //先删除之前的
+        skuMapper.delete(new QueryWrapper<Sku>().eq("product_id",productId));
+        //再添加新的
+        Sku sku = null;
+        for (Map<String, String> skuMap : skus) {//{"年龄":"xx","肤色":"xxx","price":0,"store":0,"indexs":"xxx_0_1"}
+            sku = new Sku();
+            //从参数中获取数据封装到sku对象中
+            sku.setCreateTime(System.currentTimeMillis());
+            sku.setProductId(productId);
+            //skuName
+            StringBuilder sb = new StringBuilder();
+            //map的遍历
+            for (Map.Entry<String, String> skuEntry : skuMap.entrySet()) {
+                if(!"price".equals(skuEntry.getKey())&&!"store".equals(skuEntry.getKey())&&!"indexs".equals(skuEntry.getKey())){
+                    sb.append(skuEntry.getValue());
+                }
+            }
+            sku.setSkuName(sb.toString());
+            sku.setPrice(Integer.parseInt(skuMap.get("price")));
+            sku.setAvailableStock(Integer.parseInt(skuMap.get("store")));
+
+            sku.setIndexs(skuMap.get("indexs"));
+
+            skuMapper.insert(sku);
+        }
+
+    }
+
+
     @Override
     @Transactional
     public boolean save(Product product) {
-    //创建时间
+        //创建时间
         product.setCreateTime(System.currentTimeMillis());
         //t_product
         baseMapper.insert(product);//mybatis-plus自动返回生成的主键，主键生成到了product对象中
@@ -38,10 +159,11 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         productExtMapper.insert(ext);
         return true;
     }
+
     @Override
     public PageList<Product> queryPage(ProductQuery query) {
-        IPage iPage = baseMapper.queryPage(new Page(query.getPage(),
-                query.getRows()), query);
+        IPage iPage = baseMapper.queryPage(new Page(query.getPage(), query.getRows()), query);
         return new PageList<>(iPage.getTotal(),iPage.getRecords());
     }
+
 }

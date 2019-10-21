@@ -19,14 +19,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * <p>
- * 商品目录 服务实现类
- * </p>
- *
- * @author solargen
- * @since 2019-10-12
- */
 @Service
 public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, ProductType> implements IProductTypeService {
 
@@ -41,16 +33,16 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
     @Override
     public void genHomePage() {
         //先根据product.type.vm模板生成product.type.vm.html
-        String templatePath = "D:\\ymsd\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\template\\product.type.vm";//模板路径
-        String targetPath = "D:\\ymsd\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\template\\product.type.vm.html";
+        String templatePath = "D:\\ymsd\\ibuy-parent\\ibuy-product-parent\\product-service\\src\\main\\resources\\template\\product.type.vm";//模板路径
+        String targetPath = "D:\\ymsd\\ibuy-parent\\ibuy-product-parent\\product-service\\src\\main\\resources\\template\\product.type.vm.html";
         List<ProductType> productTypes = loadTypeTree();
         staticPageClient.generateStaticPage(templatePath,targetPath,productTypes);
 
         //再根据home.vm生成html.html
-        templatePath = "D:\\ymsd\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\template\\home.vm";
-        targetPath = "D:\\ymsd\\aigou-web-parent\\ecommerce\\home.html";
+        templatePath = "D:\\ymsd\\ibuy-parent\\ibuy-product-parent\\product-service\\src\\main\\resources\\template\\home.vm";
+        targetPath = "D:\\ymsd\\ibuy-web-parent\\ecommerce\\home.html";
         Map<String,Object> model = new HashMap<>();
-        model.put("staticRoot","D:\\ymsd\\aigou-parent\\aigou-product-parent\\product-service\\src\\main\\resources\\");
+        model.put("staticRoot","D:\\ymsd\\ibuy-parent\\ibuy-product-parent\\product-service\\src\\main\\resources\\");
         staticPageClient.generateStaticPage(templatePath,targetPath,model);
     }
 

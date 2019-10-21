@@ -26,18 +26,27 @@
         <result column="commonCommentCount" property="commonCommentCount" />
         <result column="badCommentCount" property="badCommentCount" />
         <result column="skuProperties" property="skuProperties" />
-        <result column="medias" property="medias" />
-        
         <association property="productType" javaType="cn.itsource.ibuy.domain.ProductType">
-            <id column="product_type_id" property="id"></id>
-            <result column="typename" property="name"></result>
+            <id column="product_type_id" property="id"/>
+            <result column="typename" property="name"/>
         </association>
-
         <association property="brand" javaType="cn.itsource.ibuy.domain.Brand">
-            <id column="brand_id" property="id"></id>
-            <result column="brandname" property="name"></result>
+            <id column="brand_id" property="id"/>
+            <result column="brandname" property="name"/>
         </association>
     </resultMap>
+
+    <update id="updateViewProperties">
+        update t_product
+        set viewProperties = #{viewProperties}
+        where id = #{productId}
+    </update>
+
+    <update id="updateSkuProperties">
+         update t_product
+        set skuProperties = #{skuProperties}
+        where id = #{productId}
+    </update>
 
     <select id="queryPage" resultMap="BaseResultMap">
         select p.*,pt.name typename,b.name brandname
@@ -46,6 +55,7 @@
         left join t_brand b on p.brand_id = b.id
         <include refid="whereSql"></include>
     </select>
+
     <!--查询条件-->
     <sql id="whereSql">
         <where>
@@ -58,4 +68,6 @@
             </if>
         </where>
     </sql>
+
+
 </mapper>

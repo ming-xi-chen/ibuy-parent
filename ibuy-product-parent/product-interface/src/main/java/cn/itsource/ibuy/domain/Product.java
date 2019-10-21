@@ -139,5 +139,4 @@ public class Product implements Serializable {
 
     private String medias;
 
-
 }
