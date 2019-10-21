@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdbe3f55-5011-4b14-8e23-6b559450a422" name="Default" comment="aaaaa">
-      <change afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/vo/SkusVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/resources/generate-product.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-basic/basic-generator/src/main/resources/generate-product.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-basic/basic-util/src/main/java/cn/itsource/ibuy/util/ProductStateConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-basic/basic-util/src/main/java/cn/itsource/ibuy/util/ProductStateConsts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-common-parent/common-service/src/main/java/cn/itsource/ibuy/config/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-common-parent/common-service/src/main/java/cn/itsource/ibuy/config/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-interface/src/main/java/cn/itsource/ibuy/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SkuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SpecificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/mapper/SpecificationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/java/cn/itsource/ibuy/service/impl/ProductTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ibuy-product-parent/product-service/src/main/resources/cn/itsource/ibuy/mapper/ProductMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bdbe3f55-5011-4b14-8e23-6b559450a422" name="Default" comment="aaaaa" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +263,12 @@
       <serviceView>
         <option name="contentProportion" value="0.20696722" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e1c141b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -316,7 +306,7 @@
       <workItem from="1571567475962" duration="742000" />
       <workItem from="1571570841312" duration="2808000" />
       <workItem from="1571575631002" duration="604000" />
-      <workItem from="1571618985357" duration="1104000" />
+      <workItem from="1571618985357" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="aaa">
       <created>1571218254813</created>
@@ -339,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571360028041</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="aaaaa">
+      <created>1571621840973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571621840973</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
